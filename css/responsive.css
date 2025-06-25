@@ -1,0 +1,274 @@
+/* General Responsive Adjustments */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .slide-content h1 {
+        font-size: 3.5em;
+    }
+
+    .slide-content p {
+        font-size: 1.3em;
+    }
+
+    /* Header */
+    .header-actions {
+        gap: 15px; /* Reduce gap in header */
+    }
+    .search-container.active .search-input {
+        width: var(--search-input-width-desktop); /* Stays same for now */
+    }
+
+    /* Featured Main Carousel */
+    .featured-main-carousel-container {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+
+    /* Featured Thumb Carousel */
+    .featured-thumb-carousel-container {
+        top: -60px; /* Adjusted for tablets */
+        padding: 0 8px; /* Adjusted padding for smaller screens */
+    }
+    .featured-thumb-slider {
+        gap: 8px; /* Adjusted gap */
+        padding: 8px 0; /* Adjusted vertical padding */
+    }
+    .event-thumb-item {
+        flex-basis: calc((100% - 32px) / 5); /* 5 items, accounting for 4 gaps of 8px */
+    }
+    .event-thumb-item.active {
+        transform: scale(1.08); /* Slightly less pronounced highlight */
+    }
+
+    /* Featured Thumb Carousel button */
+    .btn-buy-thumb {
+        padding: 5px 9px;
+        font-size: 0.75em;
+        gap: 4px;
+    }
+    .btn-buy-thumb i {
+        font-size: 0.85em;
+    }
+
+    /* Newsletter */
+    .newsletter-section {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .header-actions {
+        gap: 10px; /* Further reduce gap */
+    }
+    .search-container.active .search-input {
+        width: var(--search-input-width-mobile); /* Shorter width for mobile */
+    }
+    .btn-secondary, .btn-primary {
+        padding: 10px 15px; /* Smaller button padding */
+        font-size: 0.9em;
+    }
+
+    /* Hero Section */
+    .slide-content h1 {
+        font-size: 2.8em;
+    }
+
+    .slide-content p {
+        font-size: 1.1em;
+    }
+
+    .btn-hero {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    /* Featured Main Carousel */
+    .featured-main-carousel-container {
+        height: 350px; /* Even smaller height for tablets */
+    }
+
+    /* Featured Thumb Carousel */
+    .featured-thumb-carousel-container {
+        top: -40px; /* Adjusted for smaller tablets/mobile */
+        padding: 0 5px; /* Less padding for mobile */
+    }
+    .featured-thumb-slider {
+        gap: 5px; /* Adjusted gap */
+        padding: 5px 0; /* Adjusted vertical padding */
+    }
+    .event-thumb-item {
+        flex-basis: calc((100% - 20px) / 5); /* 5 items, accounting for 4 gaps of 5px */
+    }
+    .event-thumb-item.active {
+        transform: scale(1.06);
+    }
+
+    /* Featured Thumb Carousel button */
+    .btn-buy-thumb {
+        padding: 4px 8px;
+        font-size: 0.7em;
+        gap: 3px;
+    }
+    .btn-buy-thumb i {
+        font-size: 0.8em;
+    }
+    .thumb-button-overlay {
+        transform: translateY(0); /* Always show on mobile for better usability */
+        background: rgba(0,0,0,0.6); /* Simpler background */
+        padding: 8px 5px; /* More direct padding */
+    }
+    .event-thumb-item:hover .thumb-button-overlay {
+        transform: translateY(0); /* No change on hover if always visible */
+    }
+
+    /* Newsletter */
+    .newsletter-form {
+        flex-direction: column;
+    }
+    .newsletter-form input[type="email"] {
+        border-radius: 8px 8px 0 0;
+    }
+    .newsletter-form button {
+        border-radius: 0 0 8px 8px;
+        margin-top: 0; /* Remove extra margin if any */
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-section h3 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .footer-section ul {
+        padding-left: 0;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    .header-actions {
+        flex-wrap: wrap; /* Allow buttons to wrap if screen is very narrow */
+        justify-content: center;
+        gap: 5px;
+    }
+    .search-container {
+        flex-basis: 100%; /* Take full width on small screens */
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .search-container.active .search-input {
+        width: calc(100% - 60px); /* Adjust to full width minus button */
+    }
+    .logo img {
+        height: 40px;
+    }
+    .btn-secondary, .btn-primary {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+
+
+    .slide-content h1 {
+        font-size: 2em;
+    }
+
+    .slide-content p {
+        font-size: 1em;
+    }
+
+    .carousel-control {
+        padding: 10px;
+        font-size: 1.5em;
+    }
+
+    .carousel-dots .dot {
+        height: 10px;
+        width: 10px;
+    }
+
+    /* Featured Main Carousel */
+    .featured-main-carousel-container {
+        height: 300px; /* Smaller height for mobile */
+    }
+
+    /* Featured Thumb Carousel */
+    .featured-thumb-carousel-container {
+        top: -30px; /* Adjusted for mobile - you might need to fine-tune this more */
+        padding: 0 3px; /* Even less padding */
+    }
+    .featured-thumb-slider {
+        gap: 3px; /* Smallest gap */
+        padding: 3px 0; /* Smallest vertical padding */
+    }
+    .event-thumb-item {
+        flex-basis: calc((100% - 12px) / 5); /* 5 items, accounting for 4 gaps of 3px */
+    }
+    .event-thumb-item.active {
+        transform: scale(1.05);
+    }
+
+    /* Featured Thumb Carousel button */
+    .btn-buy-thumb {
+        padding: 3px 6px;
+        font-size: 0.65em;
+        gap: 2px;
+    }
+    .btn-buy-thumb i {
+        font-size: 0.75em;
+    }
+    .thumb-button-overlay {
+        background: rgba(0,0,0,0.6); /* Simpler background */
+        padding: 8px 5px; /* More direct padding */
+    }
+}
+/* --- RESPONSIVE ADJUSTMENTS FOR SELECTION DE ASIENTOS PAGE --- */
+
+@media (max-width: 1023px) {
+    .seat-selection-main {
+        padding: 20px; /* Ajuste de padding para móviles/tablets */
+    }
+    .seat-selection-grid {
+        flex-direction: column; /* Asegura que las secciones estén una encima de otra */
+    }
+    .booking-summary-section {
+        order: 1; /* Pone el resumen arriba del mapa en pantallas pequeñas */
+    }
+    .seat-map-section {
+        order: 2; /* Pone el mapa debajo del resumen en pantallas pequeñas */
+    }
+    .sticky-card {
+        position: static; /* Elimina el sticky en pantallas pequeñas */
+        top: auto;
+    }
+    .card {
+        padding: 20px; /* Reduce padding de las tarjetas */
+    }
+    .card-title {
+        font-size: 1.5em; /* Reduce tamaño del título */
+        margin-bottom: 20px;
+    }
+    .seatsio-chart-container {
+        height: 400px; /* Reduce altura del mapa en móviles/tablets */
+    }
+    .booking-form .btn-primary {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 767px) {
+    .seat-selection-main {
+        padding: 15px;
+    }
+    .seatsio-chart-container {
+        height: 300px; /* Altura aún menor para teléfonos */
+    }
+}

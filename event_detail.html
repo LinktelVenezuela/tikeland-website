@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerry Rivera en Miami - Tu Ticket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="event-page-body">
+
+    <!-- HEADER PRINCIPAL (Se reutiliza el existente de tu proyecto) -->
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="TicketNow Logo">
+            </div>
+            <div class="header-center-area"> 
+                <div class="search-container">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <input type="text" class="search-input" placeholder="Buscar eventos...">
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" id="registerBtn">Registrarse</button>
+                <button class="btn btn-primary" id="loginBtn">Iniciar Sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content-padding event-main">
+        
+        <!-- SECCIÓN DE BANNER PRINCIPAL DEL EVENTO -->
+        <section class="event-hero-banner" style="background-image: url('img/flyer4_thumb.jpg');">
+            <div class="overlay"></div>
+            <div class="event-hero-content container">
+                <h1>Jerry Rivera en Concierto: La Cara de la Salsa</h1>
+                <p class="event-date">Sábado, 04 de Noviembre de 2025</p>
+                <p class="event-location"><i class="fas fa-map-marker-alt"></i> Champions Club, Doral, Florida</p>
+                <div class="supporting-artists">
+                    <span>Con invitados especiales: Kaky Ramos & Friends, Gerson Ojeda</span>
+                    <span>Host: Juan Ramon</span>
+                </div>
+                <!-- CAMBIO: Botón "Comprar Entradas Ahora" ahora es un enlace a selecciondeasiento.html -->
+                <a href="selecciondeasiento.html" class="btn btn-primary btn-buy-tickets">Comprar Entradas Ahora</a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE DETALLES Y PLANO DEL ESCENARIO -->
+        <section class="event-details-section section-padding">
+            <div class="container">
+                <div class="event-description">
+                    <h2>Un show imperdible</h2>
+                    <p>Prepárate para una noche llena de ritmo y pasión con el "Niño de la Salsa", Jerry Rivera. Conocido por sus éxitos atemporales y su carismática presencia en el escenario, Jerry Rivera promete una experiencia inolvidable. Disfruta de sus clásicos y las nuevas propuestas en un ambiente vibrante.</p>
+                    <p>Este evento exclusivo contará con la participación de destacados artistas invitados como Kaky Ramos & Friends y Gerson Ojeda, con la conducción especial de Juan Ramon, garantizando una velada espectacular para todos los amantes de la salsa.</p>
+                </div>
+
+                <div class="stage-plan">
+                    <h2>Plano del Escenario y Zonas</h2>
+                    <div class="stage-plan-svg">
+                        <!-- SVG Placeholder para el plano del escenario -->
+                        <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                            <style>
+                                .stage { fill: #1a1a1a; stroke: #00E7FF; stroke-width: 4px; }
+                                .section-vip { fill: #00E7FF; fill-opacity: 0.1; stroke: #00E7FF; stroke-width: 2px; }
+                                .section-platinum { fill: #7D40FF; fill-opacity: 0.1; stroke: #7D40FF; stroke-width: 2px; }
+                                .section-gold { fill: #ccc; fill-opacity: 0.1; stroke: #ccc; stroke-width: 2px; }
+                                .seats { fill: #eee; }
+                                .label { font-family: 'Open Sans', sans-serif; font-size: 20px; fill: #eee; text-anchor: middle; }
+                                .dot-vip { fill: #00E7FF; }
+                                .dot-platinum { fill: #7D40FF; }
+                                .dot-gold { fill: #ccc; }
+                                .legend-text { font-family: 'Open Sans', sans-serif; font-size: 16px; fill: #eee; }
+                            </style>
+                            <rect class="stage" x="150" y="50" width="500" height="150" rx="10" ry="10"/>
+                            <text class="label" x="400" y="130">ESCENARIO</text>
+
+                            <!-- ZONA VIP -->
+                            <rect class="section-vip" x="100" y="220" width="600" height="100" rx="8" ry="8"/>
+                            <text class="label" x="400" y="280">ZONA VIP</text>
+                            <circle class="dot-vip" cx="70" cy="280" r="10"/>
+
+                            <!-- ZONA PLATINUM -->
+                            <rect class="section-platinum" x="50" y="340" width="700" height="100" rx="8" ry="8"/>
+                            <text class="label" x="400" y="400">ZONA PLATINUM</text>
+                            <circle class="dot-platinum" cx="20" cy="400" r="10"/>
+
+                            <!-- ZONA GOLD -->
+                            <rect class="section-gold" x="0" y="460" width="800" height="100" rx="8" ry="8"/>
+                            <text class="label" x="400" y="520">ZONA GOLD</text>
+                            <circle class="dot-gold" cx="770" cy="520" r="10"/>
+
+                            <!-- Pequeñas representaciones de asientos -->
+                            <g class="seats">
+                                <circle cx="200" cy="250" r="4"/> <circle cx="220" cy="250" r="4"/>
+                                <circle cx="580" cy="250" r="4"/> <circle cx="600" cy="250" r="4"/>
+                                <circle cx="200" cy="370" r="4"/> <circle cx="220" cy="370" r="4"/>
+                                <circle cx="580" cy="370" r="4"/> <circle cx="600" cy="370" r="4"/>
+                                <circle cx="200" cy="490" r="4"/> <circle cx="220" cy="490" r="4"/>
+                                <circle cx="580" cy="490" r="4"/> <circle cx="600" cy="490" r="4"/>
+                            </g>
+
+                            <!-- Leyenda -->
+                            <g class="legend">
+                                <circle class="dot-vip" cx="60" cy="580" r="8"/>
+                                <text class="legend-text" x="80" y="585">VIP</text>
+                                <circle class="dot-platinum" cx="150" cy="580" r="8"/>
+                                <text class="legend-text" x="170" y="585">Platinum</text>
+                                <circle class="dot-gold" cx="260" cy="580" r="8"/>
+                                <text class="legend-text" x="280" y="585">Gold</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="ticket-options">
+                    <h2>Selecciona tu Entrada</h2>
+                    <div class="ticket-card">
+                        <h3>Zona VIP</h3>
+                        <p class="price">$150.00 USD</p>
+                        <ul>
+                            <li>Acceso preferencial</li>
+                            <li>Asiento numerado en las primeras filas</li>
+                            <li>Bebida de bienvenida</li>
+                        </ul>
+                        <button class="btn btn-primary add-to-cart-btn">Añadir al Carrito</button>
+                    </div>
+                    <div class="ticket-card">
+                        <h3>Zona Platinum</h3>
+                        <p class="price">$95.00 USD</p>
+                        <ul>
+                            <li>Acceso rápido</li>
+                            <li>Asiento numerado</li>
+                            <li>Vista privilegiada</li>
+                        </ul>
+                        <button class="btn btn-primary add-to-cart-btn">Añadir al Carrito</button>
+                    </div>
+                    <div class="ticket-card">
+                        <h3>Zona Gold</h3>
+                        <p class="price">$60.00 USD</p>
+                        <ul>
+                            <li>Acceso general</li>
+                            <li>Asiento sin numerar</li>
+                            <li>Ambiente festivo</li>
+                        </ul>
+                        <button class="btn btn-primary add-to-cart-btn">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE LISTA DE CANCIONES -->
+        <section class="song-list-section dark-bg section-padding">
+            <div class="container">
+                <h2>Éxitos de Jerry Rivera</h2>
+                <div class="song-list-grid">
+                    <div class="song-item">
+                        <span class="song-number">1.</span>
+                        <span class="song-title">Amores Como El Nuestro</span>
+                        <span class="song-duration">4:30</span>
+                    </div>
+                    <div class="song-item">
+                        <span class="song-number">2.</span>
+                        <span class="song-title">Cara de Niño</span>
+                        <span class="song-duration">4:05</span>
+                    </div>
+                    <div class="song-item">
+                        <span class="song-number">3.</span>
+                        <span class="song-title">Casi Un Hechizo</span>
+                        <span class="song-duration">4:45</span>
+                    </div>
+                    <div class="song-item">
+                        <span class="song-number">4.</span>
+                        <span class="song-title">Qué Hay de Malo</span>
+                        <span class="song-duration">3:50</span>
+                    </div>
+                    <div class="song-item">
+                        <span class="song-number">5.</span>
+                        <span class="song-title">Mi Libertad (feat. Frankie Ruiz)</span>
+                        <span class="song-duration">5:10</span>
+                    </div>
+                    <div class="song-item">
+                        <span class="song-number">6.</span>
+                        <span class="song-title">Cuenta Conmigo</span>
+                        <span class="song-duration">4:20</span>
+                    </div>
+                    <div class="song-item">
+                        <span class="song-number">7.</span>
+                        <span class="song-title">Vuela Muy Alto</span>
+                        <span class="song-duration">4:15</span>
+                    </div>
+                    <div class="song-item">
+                        <span class="song-number">8.</span>
+                        <span class="song-title">Ese</span>
+                        <span class="song-duration">4:00</span>
+                    </div>
+                    <div class="song-item">
+                        <span class="song-number">9.</span>
+                        <span class="song-title">Me Estoy Enamorando</span>
+                        <span class="song-duration">4:25</span>
+                    </div>
+                    <div class="song-item">
+                        <span class="song-number">10.</span>
+                        <span class="song-title">Un Amor Verdadero</span>
+                        <span class="song-duration">4:50</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE RECOMENDACIONES -->
+        <section class="recommendations-section section-padding">
+            <div class="container">
+                <h2>También te podría interesar...</h2>
+                <div class="recommendations-grid">
+                    <div class="rec-card">
+                        <img src="https://placehold.co/300x400/1E90FF/FFFFFF?text=Concierto+Salsa" alt="Concierto de Salsa 2">
+                        <h3>Festival de Salsa Romántica</h3>
+                        <p>Una noche con lo mejor de la salsa clásica.</p>
+                        <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                    <div class="rec-card">
+                        <img src="https://placehold.co/300x400/9932CC/FFFFFF?text=Tributo+Marc+Anthony" alt="Tributo a Marc Anthony">
+                        <h3>Tributo a Marc Anthony</h3>
+                        <p>Los éxitos del ícono de la salsa en vivo.</p>
+                        <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                    <div class="rec-card">
+                        <img src="https://placehold.co/300x400/FFD700/000000?text=Clases+de+Baile" alt="Clases de Baile">
+                        <h3>Clases de Baile de Salsa</h3>
+                        <p>Aprende los pasos para la pista de baile.</p>
+                        <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (Se reutiliza el existente de tu proyecto) -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section about">
+                <h3>Tikeland</h3>
+                <p>Tu plataforma definitiva para descubrir y comprar entradas a los mejores eventos.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#">Cómo Funciona</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Calle Falsa, Ciudad Inventada</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@tikeland.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tikeland. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <!-- Si la página de detalle necesita JS específico en el futuro, se añadiría aquí o en script.js -->
+</body>
+</html>

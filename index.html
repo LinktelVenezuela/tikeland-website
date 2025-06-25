@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tikeland - Tu Portal de Eventos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="TicketNow Logo">
+            </div>
+            <!-- Nueva estructura para centrar la búsqueda -->
+            <div class="header-center-area"> 
+                <div class="search-container">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <input type="text" class="search-input" placeholder="Buscar eventos...">
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" id="registerBtn">Registrarse</button>
+                <button class="btn btn-primary" id="loginBtn">Iniciar Sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <div class="social-login">
+                <button class="social-btn google"><i class="fab fa-google"></i> Continuar con Google</button>
+                <button class="social-btn apple"><i class="fab fa-apple"></i> Continuar con Apple</button>
+            </div>
+            <div class="divider">o</div>
+            <form>
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="tu@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Contraseña</label>
+                    <input type="password" id="loginPassword" placeholder="********">
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Iniciar Sesión</button>
+            </form>
+            <p class="forgot-password"><a href="#">¿Olvidaste tu contraseña?</a></p>
+            <p class="modal-switch-text">¿No tienes cuenta? <a href="#" id="showRegister">Regístrate</a></p>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Crear Cuenta</h2>
+            <div class="social-login">
+                <button class="social-btn google"><i class="fab fa-google"></i> Continuar con Google</button>
+                <button class="social-btn apple"><i class="fab fa-apple"></i> Continuar con Apple</button>
+            </div>
+            <div class="divider">o</div>
+            <form>
+                <div class="form-group">
+                    <label for="registerName">Nombre Completo</label>
+                    <input type="text" id="registerName" placeholder="Tu Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="tu@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Contraseña</label>
+                    <input type="password" id="registerPassword" placeholder="********">
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Registrarse</button>
+            </form>
+            <p class="modal-switch-text">¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia Sesión</a></p>
+        </div>
+    </div>
+
+    <section id="featured-events-carousel-section" class="dark-bg main-content-padding">
+        <div class="full-width-carousel-wrapper">
+            <div class="featured-main-carousel-container">
+                <div class="featured-main-slider" id="featuredMainSlider">
+                    <div class="event-full-card">
+                        <img src="img/flyer1_main.jpg" alt="Concierto de Risas Infinitas">
+                    </div>
+                    <div class="event-full-card">
+                        <img src="img/flyer2_main.jpg" alt="Festival de Música Electrónica">
+                    </div>
+                    <div class="event-full-card">
+                        <img src="img/flyer3_main.jpg" alt="Exposición de Arte Moderno">
+                    </div>
+                    <div class="event-full-card">
+                        <img src="img/flyer4_main.jpg" alt="Obra de Teatro Clásica">
+                    </div>
+                    <div class="event-full-card">
+                        <img src="img/flyer5_main.jpg" alt="Stand-up Comedy Tour">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-thumb-carousel-container">
+            <div class="featured-thumb-slider" id="featuredThumbSlider">
+                <div class="event-thumb-item active" data-index="0">
+                    <img src="img/flyer1_thumb.jpg" alt="Thumbnail 1">
+                    <div class="thumb-button-overlay">
+                        <!-- Enlace a event_detail.html -->
+                        <a href="event_detail.html" class="btn btn-buy-thumb">Comprar <i class="fa-solid fa-ticket"></i></a>
+                    </div>
+                </div>
+                <div class="event-thumb-item" data-index="1">
+                    <img src="img/flyer2_thumb.jpg" alt="Thumbnail 2">
+                    <div class="thumb-button-overlay">
+                        <!-- Enlace a event_detail.html -->
+                        <a href="event_detail.html" class="btn btn-buy-thumb">Comprar <i class="fa-solid fa-ticket"></i></a>
+                    </div>
+                </div>
+                <div class="event-thumb-item" data-index="2">
+                    <img src="img/flyer3_thumb.jpg" alt="Thumbnail 3">
+                    <div class="thumb-button-overlay">
+                        <!-- Enlace a event_detail.html -->
+                        <a href="event_detail.html" class="btn btn-buy-thumb">Comprar <i class="fa-solid fa-ticket"></i></a>
+                    </div>
+                </div>
+                <div class="event-thumb-item" data-index="3">
+                    <img src="img/flyer4_thumb.jpg" alt="Thumbnail 4">
+                    <div class="thumb-button-overlay">
+                        <!-- Enlace a event_detail.html -->
+                        <a href="event_detail.html" class="btn btn-buy-thumb">Comprar <i class="fa-solid fa-ticket"></i></a>
+                    </div>
+                </div>
+                <div class="event-thumb-item" data-index="4">
+                    <img src="img/flyer5_thumb.jpg" alt="Thumbnail 5">
+                    <div class="thumb-button-overlay">
+                        <!-- Enlace a event_detail.html -->
+                        <a href="event_detail.html" class="btn btn-buy-thumb">Comprar <i class="fa-solid fa-ticket"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hero-section">
+        <div class="carousel-container">
+            <div class="carousel" id="heroCarousel">
+                <div class="carousel-slide" style="background-image: url('img/banner1.jpg');">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h1>Vive la Música en Vivo</h1>
+                        <p>Descubre los mejores conciertos y festivales en tu ciudad. <span>20 Noviembre 2025</span></p>
+                        <a href="#" class="btn btn-hero">Explorar Eventos</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('img/banner2.jpg');">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h1>Noches de Teatro Inolvidables</h1>
+                        <p>Las obras más aclamadas te esperan. <span>1 Dic 2025</span></p>
+                        <a href="#" class="btn btn-hero">Ver Obras</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('img/banner3.jpg');">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h1>Conferencias que Inspiran</h1>
+                        <p>Aprende de los líderes y expertos de tu sector. <span>10 Ene 2026</span></p>
+                        <a href="#" class="btn btn-hero">Descubrir Charlas</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('img/banner4.jpg');">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h1>Deporte, Pasión y Adrenalina</h1>
+                        <p>No te pierdas los eventos deportivos más emocionantes. <span>15 Feb 2026</span></p>
+                        <a href="#" class="btn btn-hero">Ver Partidos</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('img/banner5.jpg');">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h1>Festivales para Todos</h1>
+                        <p>Explora la diversidad cultural y gastronómica. <span>20 Mar 2026</span></p>
+                        <a href="#" class="btn btn-hero">Explorar Festivales</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control prev" data-carousel="heroCarousel">&lt;</button>
+            <button class="carousel-control next" data-carousel="heroCarousel">&gt;</button>
+            <div class="carousel-dots" id="heroCarouselDots"></div>
+            <div class="carousel-autoplay-toggle">
+                <button class="play-pause-btn" id="heroAutoplayBtn"><i class="fas fa-pause"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>¡No te pierdas ningún evento!</h2>
+            <p>Suscríbete a nuestro boletín para recibir las últimas noticias y ofertas exclusivas.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Introduce tu email" required>
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section about">
+                <h3>Tikeland</h3>
+                <p>Tu plataforma definitiva para descubrir y comprar entradas a los mejores eventos.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#">Cómo Funciona</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Calle Falsa, Ciudad Inventada</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@tikeland.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tikeland. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
